@@ -43,15 +43,13 @@ $ bin/windows/kafka-console-consumer.bat --bootstrap-server localhost:9092 --top
 
 To start an application you need to pass variables to `.env` file.
 
-You can use example `.env.example` file with some predefined environments.
-
 Application is running on port `8081`.
 
 All insignificant features (checkstyle, build check, dto validation) are not presented.
 
 Application has two endpoints:
 * POST `/api/v1/data/send`
-#### Example JSON
+#### Example JSON (send data of a specific type from sensor #1)
 ```json
 {
   "sensorId": 1,
@@ -62,7 +60,7 @@ Application has two endpoints:
 ```
 
 * POST `/api/v1/data/test/send`
-#### Example JSON
+#### Example JSON (every 5 seconds send random data from sensor No. 1)
 ```json
 {
   "delayInSeconds": 5,
